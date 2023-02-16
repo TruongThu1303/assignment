@@ -1,0 +1,733 @@
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+}
+.banner-top{
+    height: 48px;
+    display: block;
+}
+
+
+header{
+
+
+
+
+
+  background: #fff;
+  padding: 10px;
+  margin: 20px;
+  border-bottom: 0px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+
+
+
+
+.timkiem{
+  background-color: #fcaf17;
+  width: 22px;
+}
+b{
+  
+  color: #fcaf17;
+}
+.phone{
+  flex: 1;
+  width: 15px;
+  text-decoration: none;
+ 
+}
+.set{
+  width: 20px;
+}
+
+/* timkiem */
+.search-input{
+  list-style-type: none;
+}
+
+.map{
+  flex: 1; 
+  
+}
+.search{
+  width: 20px;
+  background-color: #fcaf17;
+}
+.logo{
+  width: 110px;
+  height: 50px;
+  margin: 20px;
+}
+
+.timkiem2 input{
+  width: 396px;
+  height: 38px;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  
+}
+.input-group:hover{
+  background-color: #fcaf17;
+}
+
+#search-addon {
+  background-color: #fcaf17;
+  border-color: #fcaf17;
+  color: white;
+}
+
+
+
+
+
+.dropdown {
+  float: left;
+  overflow:hidden;
+} 
+/* nham o day */
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width:16.66%;
+  padding: 16px;
+  background-color:white;
+  height: 300px;
+  text-align: left;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ig1{
+  max-width:280px ;
+  height:400px ;
+}
+.sheader{
+  text-align: center;
+}
+.font{
+  font-size: 20px;
+}
+.ig2{
+  max-width:800px ;
+  height: 180px;
+}
+.pepsi{
+  text-align: left;
+}
+.ig3{
+  max-width: 280px;
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+/* chitietsp */
+.product-content{
+display: flex;
+}
+.giasp{
+color: #fcaf17;
+}
+
+.bentrenanh >p{
+  margin-bottom: 30px;
+  margin: 0 12px;
+  font-size: 16px;
+  display: inline;
+}
+
+.product-content-left{
+  width: 50%;
+  display: flex;
+}
+
+.product-content-right{
+  width: 50%;
+}
+
+.big-img{
+  width: 80%;
+  padding-right: 20px;
+}
+.big-img img{
+  width : 100%;
+}
+
+.small-img{
+  width: 20%;
+  margin:35px;
+  width: 80px;
+  height: 105px;
+}
+
+.small-img img{
+  width: 100%;
+}
+
+.product-content-right{
+  padding-left: 20px;
+ width: 50%;   
+}
+
+.chonmau img{
+width: 44px;
+height: 44px;
+border-radius:50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+}
+
+.chon-size {
+display: inline;
+justify-content:space-between;
+}
+
+
+/* Mua ngay và thêm giỏ hàng */
+.button{
+  width: 560px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  
+}
+
+#muangay {
+  font-size: 16px;
+  width: 320px;
+  height: 64px;
+  padding: 16px 32px;
+  color: black;
+  
+}
+
+#muangay:hover {
+  background-color: #fcaf17;
+  border-color: #fcaf17;
+  color: #2a2a86;
+}
+
+#themvaogiohang {
+  width: 280px;
+  height: 64px;
+  font-size: 16px;
+  border-color: #2a2a86;
+  color: #2a2a86;
+}
+
+#themvaogiohang:hover {
+  color: white;
+  background-color: #fcaf17;
+  border-color: #fcaf17;
+}
+
+.btn-outline-warning {
+  margin-left: 15px;
+}
+
+.themgiohang {
+  width: 25px;
+  height: 23px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* End Mua ngay và thêm giỏ hàng */
+
+/* Số điện thoại và tìm shop gần nhất*/
+.thongtinshop {
+  width: 560px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-sdt:hover {
+  background-color: #fcaf17;
+  color: #2a2a86;
+}
+
+.sodienthoai {
+  text-decoration: none;
+  background-color: #fcaf17;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 44px;
+  color: #fff;
+  justify-content: center;
+}
+
+.goidatmua {
+  margin-left: 10px;
+}
+
+.diachi {
+  text-decoration: none;
+  background-color: #fcaf17;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 44px;
+  color: #fff;
+  justify-content: center;
+}
+
+.info-diachi:hover {
+  color: #2a2a86;
+  background-color: #fcaf17;
+}
+
+.timdiachi{
+  margin-left: 12px;
+}
+/* End Số điện thoại và Tìm shop gần nhất */
+
+.listdichvu {
+  width: 560px;
+  height: auto;
+}
+
+.shipcod{
+width: 282px;
+display: flex;
+justify-content: space-between;
+margin-top: 15px;
+
+}
+.shipcod button{
+  border: 1px solid #fff;
+}
+
+
+
+.shipcod img {
+width: 41px;
+height: 42px;
+display: inline;
+}
+
+.chinhsachvc{
+width: 282px;
+display: flex;
+justify-content: space-between;
+}
+
+.chinhsachvc button{
+  border: 1px solid #fff;
+
+}
+
+.chinhsachvc img{
+width: 41px;
+height: 42px;
+display: flex;
+}
+
+.doitra{
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 560px;
+  height: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fcaf17;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.fas {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.mienphidoitra {
+  padding-top: 5px;
+  margin-left: 5px;
+}
+
+/* chọn số lượng */
+.buttons_added {
+  opacity:1;
+  display:inline-flex;
+}
+.is-form {
+  overflow:hidden;
+  position:relative;
+  background-color:#f9f9f9;
+  height:2rem;
+  width: 2rem;
+  padding:0;
+  border:1px solid #ddd;
+}
+.input-qty {
+  background-color:#fff;
+  height:2rem;
+  text-align:center;
+  font-size: 16px;
+  margin:0;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  border-left:0;
+  border-right:0;
+  padding:0;
+}
+/* End chọn số lượng */
+
+/* danh mục sản phẩm */
+.name{
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
+.products{
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 400px;
+  
+}
+.product-item{
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+.ig5{
+    max-width: 400px;
+    height: 300px;
+} 
+
+
+
+
+/* end */
+
+
+/* danh gia */
+div.stars {
+  width: 270px;
+  display: inline-block;
+  margin-left: 630px;
+}
+ 
+input.star { display: none; }
+ 
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+ 
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+ 
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+ 
+input.star-1:checked ~ label.star:before { color: #F62; }
+ 
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+ 
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+
+/* end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* chan trang */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  border-radius: 6px;
+  }
+  
+  .topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+  
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+  
+  .topnav a.active {
+  background-color: #2196F3;
+  color: white;
+  }
+  
+  .topnav .search-container {
+  float: left;
+  height: 60px;
+  
+  }
+  
+  .topnav input[type=text] {
+  padding: 6px;
+  width: 280px;
+  height: 60px;
+  font-size: 17px;
+  border: none;
+  }
+  
+  .topnav .search-container button {
+  float: right;
+  padding: 6px;
+  width: 100px;
+  height: 60px; 
+  background: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+  background: white;
+  }
+  
+  @media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+  }
+  ::placeholder{
+  color:white;
+  text-align: center;
+  }
+  
+  .column1 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 400px;
+  color: white;
+  
+  }
+  
+  
+  .row1:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+  
+  @media screen and (max-width: 1000px) {
+  .column1 {
+  width: 100%;
+  }   
+  }
+  
+  .ig4{
+  max-width: 40px;
+  height: 40px;
+  }
+  .col1{
+  width:400px ;
+  
+  }
+  .col2{
+  width:200px ;
+  }
+  
+  .col3{
+  width: 220px;
+  }
+  
+  .col5{
+  width:450px;
+  font-size: 18px;
+  }
+  
+  .vitri1{
+  display: flex;
+  margin-left: 20px;
+  margin-top: 40px;
+  }
+  
+  .col6{
+  width: 60px;
+  
+  }
+  
+  .cuahang1{
+  display: flex;
+  margin-left: 20px;
+  margin-top: 42px;
+  }
+  
+  .dienthoai1{
+  display: flex;
+  margin-left: 20px;
+  margin-top: 30px;
+  }
+  
+  .email1{
+  display: flex;
+  margin-left:20px ;
+  margin-top: 26px;
+  }
+  
+  .xacnhan1{
+  display: block;
+  margin-top: 40px;
+  margin-left: 20px;
+  }
+  
+  .copy{
+  color: var(--white-color);
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 15px;
+  height: 100px;
+  color: white;
+  }
+  
+  .column2 {
+  float: left;
+  width: 100%;
+  height: 100px;
+  color: white; 
+  }
+    
+  .row2:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+  .footer{
+  width: 100%;
+  background-color: #2a2a86;
+  }
+  
+  /* end */
+ 

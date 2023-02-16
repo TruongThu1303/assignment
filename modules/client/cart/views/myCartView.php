@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trending</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="yody/cs.css">
+	<link rel="stylesheet" href="   https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+		integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+	<style>
+		.xuhuong{
+			font-family: 'Satisfy', cursive;
+		}
+		.danhmuc{
+			font-family: 'Pacifico', cursive;
+		}
+	</style>
+<body>
+	<div class="">
+		<div class="w-full flex justify-center">
+			<!--sale-->
+			<img src="https://bizweb.sapocdn.net/100/438/408/themes/863105/assets/bannertop.jpg?1658475556147" alt="">
+		</div>
+		<!-- hết phần sale -->
+		<header class="flex justify-between pt-1">
+			<a href="html.html">
+				<img src="assets/media/logos/trending.jpg" alt="" height="150px" width="150px">
+			</a>
+			<div class="flex mx-8">
+				<!--menu1-->
+				<div class="flex">
+					
+					<ul class="flex space-x-8 mt-8 p-2">
+					<?php foreach ($categories as $category){
+                                extract($category);
+                                echo '<a href="?role=client&mod=home&id_cate='.$id.'" class="text-orange-500 hover:font-bold hover:text-orange-500 text-xl">'.$name.'</a>';
+
+					} ?>	
+					</ul>
+				</div>
+	
+				
+				<!--and đổi trả-->
+			</div>
+			<!--end menu1-->
+
+			<div >
+				<!--tìm kiếm-->
+				<div class="flex space-x-5">
+					<!--search-->
+					<form action="" class="flex  rounded-lg space-x-3 pt-3 mr-3">
+						<input type="email" placeholder="Tìm sản phẩm" required class="border-2 text-xl p-2 rounded-lg">
+						<button type="submit" class="bg-red-500 border-2 text-xl w-1/2 rounded-lg text-white hover:font-bold "> Tìm kiếm</button>
+					</form>
+				</div>
+
+				<!-- <div  class="flex space-x-2" >
+					<a href="dangki.html" class="mx-4 mb-11 mt-3 border-2 rounded-lg hover:bg-orange-400 hover:text-white hover:font-bold text-orange-500 p-2"><span class="m-2">Đăng ký</span></a> 
+				    <a href="dangnhap.html" class="mx-4 mb-11 mt-3 border-2 rounded-lg hover:bg-orange-400 hover:text-white hover:font-bold text-orange-500 p-2"><span>Đăng nhập</span></a>
+				</div> -->
+			</div>
+			<!--end tìm kiếm-->
+
+
+		</header>
+		
+        <div class="border-2 my-10 mx-5 rounded-lg">
+        <div class="bg-orange-200 text-orange-500 py-2  font-bold text-[25px] " align="center">ĐƠN HÀNG CỦA BẠN</div>
+        <div class="boxcontent ">
+                 <ul class="py-10">
+        <table>
+		<tr> 
+					<td class="px-3 font-bold text-[16px]">MÃ ĐƠN HÀNG </td>
+					<td class="px-3 font-bold text-[16px]">TÊN SẢN PHẨM</td>
+                    <td class="px-3 font-bold text-[16px]">SỐ LƯỢNG MẶT HÀNG</td>
+                    <td class="px-3 font-bold text-[16px]">GIÁ</td>
+                    <td class="px-3 font-bold text-[16px]">TỔNG GIÁ TRỊ ĐƠN HÀNG</td>
+					<td class="px-3 font-bold text-[16px]">NGÀY ĐẶT</td>
+                    <td class="px-3 font-bold text-[16px] ">TÌNH TRẠNG ĐƠN HÀNG</td>
+
+                    </tr>
+					<?php foreach($carts as $cart):?>
+                    <tr class="my-3">
+                        <td  class="px-3 text-[16px]"><?= $cart['id']?></td>
+						<td  class="px-3 text-[16px]"><?= $cart['name_product']?></td>
+                        <td  class="px-3 text-[16px] "><?= $cart['quantity']?></td>
+                        <td  class="px-3 text-[16px]"><?= $cart['price']?></td>
+                        <td  class="px-3 text-[16px]"><?= $cart['total']?></td>
+                        <td  class="px-3 text-[16px] "><?= date('d-m-Y', strtotime($cart['date']))?></td>
+						<td  class="px-3 text-[16px] "><?= $cart['status']==0?'Đang giao hàng':'Đã giao hàng'?></td>
+                    </tr>
+					<?php endforeach ?>
+        </table>            
+                </ul> 
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+		integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+		crossorigin="anonymous"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+		integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+		crossorigin="anonymous"></script>
+        <footer class="bg-indigo-900 ">
+		<div class="grid grid-cols-6 gap-4 mr-18 py-10">
+			<div class="col-span-2 m-4">
+				<!--Đăng kí thông tin-->
+				<p class="danhmuc m-4 text-orange-300">“Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi suy nghĩ hành động
+					của mình” là sứ mệnh, là
+					triết lý, chiến lược.. luôn cùng YODY tiến bước”</p>
+				<h3 class="text-white m-4 font-bold">ĐĂNG KÝ NHẬN THÔNG TIN</h3>
+				<form action="" class="flex m-4 space-x-3">
+					<input type="email" placeholder="Nhập email đăng kí của bạn" required
+						class="border-2 text-xl rounded-lg p-2 bg-indigo-400 placeholder:text-white w-3/4">
+					<button type="submit" class="bg-white text-orange-300 text-xl rounded-lg p-2 w-1/4hover:text-orange-300 hover:font-bold"> Đăng ký</button>
+				</form>
+				<div class="grid grid-cols-6 gap-4 span-x-4">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA6LSlH4PpKRTgJHBrG_fILXEwp5VGaczxjA&usqp=CAU"
+						alt="">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHjjI_i03PwvchXYZljAxgYEXvLT-S-1a_Kg&usqp=CAU"
+						alt="">
+					<img src="https://bizweb.sapocdn.net/100/438/408/themes/863105/assets/social_3.png?1658742748962"
+						alt="">
+					<img src="https://bizweb.sapocdn.net/100/438/408/themes/863105/assets/social_4.png?1658742748962"
+						alt="">
+					<img src="https://bizweb.sapocdn.net/100/438/408/themes/863105/assets/social_6.png?1658742748962"
+						alt="">
+					<img src="https://bizweb.sapocdn.net/100/438/408/themes/863105/assets/social_8.png?1658742748962"
+						alt="">
+				</div>
+			</div>
+			<div class="text-white m-4">
+				<h3 class="xuhuong m-4" style="color:#fcaf17;">Về YODY</h3>
+				<ul class="m-4">
+					<li><a class="hover:text-orange-300"   href="#">Giới thiệu</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Liên Hệ</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Tuyển dụng</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Tin Tức</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Hệ thống cửa hàng</a></li>
+				</ul>
+			</div>
+			<div class="text-white m-4">
+				<h3 class="xuhuong m-4" style="color:#fcaf17;">HỖ TRỢ KHÁCH HÀNG</h3>
+				<ul class="m-4">
+					<li><a  class="hover:text-orange-300"  href="#">Hướng dẫn chọn size</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Chính sách khách hàng thân thiết</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Chính sách đổi/trả</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Chính sách bảo mật</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Thanh toán, giao nhận</a></li>
+					<li><a  class="hover:text-orange-300"  href="#">Chính sách Đồng phục</a></li>
+				</ul>
+			</div>
+			<div class="text-white col-span-2 m-4">
+				<h3 class="xuhuong text-xl mb-3" style="color:#fcaf17;">Công ty cổ phần Thời trang YODY</h3>
+				<p  class="hover:text-orange-300" >Mã số thuế: 0801206940</p>
+				<p  class="hover:text-orange-300" >Địa chỉ: Đường An Định - Phường Việt Hoa - Thành phố Hải Dương - Hải Dương</p>
+				<div>
+					<img src="">
+					<a  class="hover:text-orange-300"  hefr="#">Tìm cửa hàng gần bạn nhất</a>
+				</div>
+				<div>
+					<img src="">
+					<a  class="hover:text-orange-300"  hefr="#">Liên hệ đặt hàng: 024 9996 6868
+						Thắc mắc đơn hàng: 024 9996 6868
+						Góp ý khiếu nại: 1800 2086</a>
+				</div>
+				<div>
+					<img src="">
+					<a  class="hover:text-orange-300"  hefr="#">Email: chamsockhachhang@xshop.vn
+					</a>
+				</div>
+				<div>
+					<img src="assets/media/logos/trending.jpg" width="100px" height="100px">
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		<p class="text-center text-white">Website bán hàng xshop <span class="text-orange-300">Yody.vn</span>@ All right
+			reserved</p>
+	</footer>
+	<script type="module" src="product.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+	integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</html>
